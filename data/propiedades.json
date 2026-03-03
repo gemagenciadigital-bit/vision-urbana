@@ -164,5 +164,118 @@
       "renta",
       "oportunidad"
     ]
+  },
+  {
+    "id": "chacra-calle-panama",
+    "titulo": "Chacra en venta – Calle Panamá, Gral. Roca",
+    "precio": "$100.000",
+    "tipo": "Lote",
+    "operacion": "Venta",
+    "ubicacion": "Calle Panamá, Gral. Roca",
+    "dormitorios": 0,
+    "baños": 0,
+    "superficie": "6 Hectáreas",
+    "descripcion": "Chacra de 6 hectáreas con entorno natural privilegiado, ideal para desarrollo productivo, vivienda permanente o proyecto de inversión. Posee excelente acceso y todos los servicios.",
+    "imagen": "../../assets/propiedades/CHACRA EN VENTA-Calle Panamá/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/CHACRA EN VENTA-Calle Panamá/portada.jpeg",
+      "../../assets/propiedades/CHACRA EN VENTA-Calle Panamá/WhatsApp Image 2026-02-28 at 20.23.59 (3).jpeg",
+      "../../assets/propiedades/CHACRA EN VENTA-Calle Panamá/WhatsApp Image 2026-02-28 at 20.24.01.jpeg"
+    ],
+    "link": "../detalles/chacra-calle-panama.html",
+    "etiquetas": [
+      "naturaleza",
+      "inversión",
+      "servicios"
+    ]
+  },
+  {
+    "id": "quincho-porvenir",
+    "titulo": "Casa Quincho en venta – Barrio Porvenir, Gral. Roca",
+    "precio": "$100.000",
+    "tipo": "Casa",
+    "operacion": "Venta",
+    "ubicacion": "Barrio Porvenir, Gral. Roca",
+    "dormitorios": 2,
+    "baños": 1,
+    "superficie": "300m² lote / 50m² quincho",
+    "descripcion": "Casa funcional y lista para disfrutar en Barrio Porvenir. Cuenta con 2 habitaciones, galería techada y un amplio quincho de 50m² ideal para reuniones familiares. Ubicada en un entorno residencial tranquilo sobre un lote de 300m².",
+    "imagen": "../../assets/propiedades/Quincho-Porvenir/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/Quincho-Porvenir/portada.jpeg",
+      "../../assets/propiedades/Quincho-Porvenir/WhatsApp Image 2026-02-28 at 20.23.58.jpeg",
+      "../../assets/propiedades/Quincho-Porvenir/WhatsApp Image 2026-02-28 at 20.23.59 (1).jpeg",
+      "../../assets/propiedades/Quincho-Porvenir/WhatsApp Image 2026-02-28 at 20.23.59.jpeg",
+      "../../assets/propiedades/Quincho-Porvenir/WhatsApp Image 2026-02-28 at 20.24.00 (2).jpeg",
+      "../../assets/propiedades/Quincho-Porvenir/WhatsApp Image 2026-02-28 at 20.24.00 (3).jpeg",
+      "../../assets/propiedades/Quincho-Porvenir/WhatsApp Image 2024-02-28 at 20.24.00.jpeg",
+      "../../assets/propiedades/Quincho-Porvenir/WhatsApp Image 2026-02-28 at 20.24.01 (1).jpeg"
+    ],
+    "link": "../detalles/quincho-porvenir.html",
+    "etiquetas": [
+      "quincho",
+      "oportunidad",
+      "tranquilidad"
+    ]
+  },
+  {
+    "id": "casa-bagliani",
+    "titulo": "Casa en Venta – Barrio Bagliani, Gral. Roca",
+    "precio": "Consultar",
+    "tipo": "Casa",
+    "operacion": "Venta",
+    "ubicacion": "Saavedra, Barrio Bagliani, Gral. Roca",
+    "dormitorios": 3,
+    "baños": 2,
+    "superficie": "218m² construidos / Lote 12x23m",
+    "descripcion": "Propiedad amplia y funcional sobre calle Saavedra. Cuenta con dos plantas, 3 dormitorios (principal en suite con hidromasaje), living comedor, cocina integrada y patio con parrilla. Una construcción sólida con excelente distribución y luminosidad.",
+    "imagen": "../../assets/propiedades/Casa Barrio Bagliani/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/Casa Barrio Bagliani/portada.jpeg",
+      "../../assets/propiedades/Casa Barrio Bagliani/WhatsApp Image 2026-02-24 at 10.59.17 (1).jpeg",
+      "../../assets/propiedades/Casa Barrio Bagliani/WhatsApp Image 2026-02-24 at 10.59.17 (2).jpeg",
+      "../../assets/propiedades/Casa Barrio Bagliani/WhatsApp Image 2026-02-24 at 10.59.18 (1).jpeg",
+      "../../assets/propiedades/Casa Barrio Bagliani/WhatsApp Image 2026-02-24 at 10.59.18.jpeg",
+      "../../assets/propiedades/Casa Barrio Bagliani/WhatsApp Image 2026-02-24 at 10.59.19 (1).jpeg",
+      "../../assets/propiedades/Casa Barrio Bagliani/WhatsApp Image 2026-02-24 at 10.59.19 (2).jpeg",
+      "../../assets/propiedades/Casa Barrio Bagliani/WhatsApp Image 2026-02-24 at 10.59.19 (3).jpeg",
+      "../../assets/propiedades/Casa Barrio Bagliani/WhatsApp Image 2026-02-24 at 10.59.19.jpeg",
+      "../../assets/propiedades/Casa Barrio Bagliani/WhatsApp Image.jpeg"
+    ],
+    "link": "../detalles/casa-bagliani.html",
+    "etiquetas": [
+      "Bagliani",
+      "familiar",
+      "suite"
+    ]
+  },
+  {
+    "id": "quincho-la-campigna",
+    "titulo": "Quincho en Venta – Barrio Privado La Campigna",
+    "precio": "Consultar",
+    "tipo": "Casa",
+    "operacion": "Venta",
+    "ubicacion": "Barrio Privado La Campigna, Gral. Roca",
+    "dormitorios": 0,
+    "baños": 1,
+    "superficie": "2.532m² terreno / 72m² cubiertos",
+    "descripcion": "Excepcional quincho en Barrio Privado La Campigna. Cuenta con un terreno de 2.532 m², pileta de 9x4 mts, quincho cubierto de 12x6 mts con parrilla y horno de barro. Un entorno natural único para disfrutar con familia y amigos.",
+    "imagen": "../../assets/propiedades/Quincho-La Campigna/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/Quincho-La Campigna/portada.jpeg",
+      "../../assets/propiedades/Quincho-La Campigna/WhatsApp Image 2026-02-24 at 10.07.18 (1).jpeg",
+      "../../assets/propiedades/Quincho-La Campigna/WhatsApp Image 2026-02-24 at 10.07.18 (2).jpeg",
+      "../../assets/propiedades/Quincho-La Campigna/WhatsApp Image 2026-02-24 at 10.07.18.jpeg",
+      "../../assets/propiedades/Quincho-La Campigna/WhatsApp Image 2026-02-24 at 10.07.19 (1).jpeg",
+      "../../assets/propiedades/Quincho-La Campigna/WhatsApp Image 2026-02-24 at 10.07.19 (2).jpeg",
+      "../../assets/propiedades/Quincho-La Campigna/WhatsApp Image 2026-02-24 at 10.07.19 (3).jpeg",
+      "../../assets/propiedades/Quincho-La Campigna/WhatsApp Image 2026-02-24 at 10.07.19.jpeg"
+    ],
+    "link": "../detalles/quincho-la-campigna.html",
+    "etiquetas": [
+      "Privado",
+      "pileta",
+      "eventos"
+    ]
   }
 ]
