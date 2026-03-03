@@ -169,8 +169,8 @@
         </div>
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
             <div>
-                <h2 class="text-3xl font-bold tracking-tight">Propiedades en General Roca</h2>
-                <p class="text-zinc-500 mt-1">12 Propiedades encontradas en General Roca, Río Negro</p>
+                <h2 class="text-3xl font-bold tracking-tight">Catálogo de Propiedades</h2>
+                <p id="property-count" class="text-zinc-500 mt-1">Cargando propiedades...</p>
             </div>
             <div class="flex items-center gap-3">
                 <span class="text-sm text-zinc-400">Ordenar por:</span>
@@ -375,9 +375,9 @@
         }
 
         function updateCount(count) {
-            const countEl = document.querySelector('main h2 + p');
+            const countEl = document.getElementById('property-count');
             if (countEl) {
-                countEl.textContent = `${count} ${count === 1 ? 'Propiedad encontrada' : 'Propiedades encontradas'} en General Roca, Río Negro`;
+                countEl.textContent = `${count} ${count === 1 ? 'Propiedad encontrada' : 'Propiedades encontradas'}`;
             }
         }
 
@@ -394,15 +394,15 @@
             nav.classList.remove('hidden');
             let html = `
                 <button onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''} 
-                    class="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-200 hover:bg-primary hover:border-primary disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:border-zinc-200 transition-all">
-                    <span class="material-symbols-outlined text-sm">chevron_left</span>
+                    class="h-10 px-4 flex items-center justify-center rounded-lg border-2 border-zinc-200 hover:bg-primary hover:border-primary disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:border-zinc-200 transition-all font-bold text-sm">
+                    <span class="material-symbols-outlined text-sm mr-1">chevron_left</span> Anterior
                 </button>
             `;
 
             for (let i = 1; i <= totalPages; i++) {
                 html += `
                     <button onclick="changePage(${i})" 
-                        class="w-10 h-10 flex items-center justify-center rounded-lg font-bold transition-all ${currentPage === i ? 'bg-primary text-asfalto' : 'border border-zinc-200 hover:bg-primary/20'}">
+                        class="w-10 h-10 flex items-center justify-center rounded-lg font-bold transition-all border-2 ${currentPage === i ? 'bg-primary border-primary text-asfalto' : 'border-zinc-200 hover:bg-primary/20 hover:border-primary'}">
                         ${i}
                     </button>
                 `;
@@ -410,8 +410,8 @@
 
             html += `
                 <button onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''} 
-                    class="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-200 hover:bg-primary hover:border-primary disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:border-zinc-200 transition-all">
-                    <span class="material-symbols-outlined text-sm">chevron_right</span>
+                    class="h-10 px-4 flex items-center justify-center rounded-lg border-2 border-zinc-200 hover:bg-primary hover:border-primary disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:border-zinc-200 transition-all font-bold text-sm">
+                    Siguiente <span class="material-symbols-outlined text-sm ml-1">chevron_right</span>
                 </button>
             `;
 
