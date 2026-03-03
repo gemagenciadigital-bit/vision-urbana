@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Panel de Agentes | Visión Urbana</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "verde-lima": "#D9E021",
+                        "asfalto": "#2D2E32",
+                        "hormigon": "#6D7278",
+                        "niebla": "#F5F5F5",
+                        "cielo-urbano": "#D1E9F6",
+                    },
+                    fontFamily: {
+                        "heading": ["Space Grotesk", "sans-serif"],
+                        "body": ["Roboto", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body { @apply font-body text-asfalto bg-niebla; }
+            h1, h2, h3, h4 { @apply font-heading; }
+        }
+        .agent-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .agent-card:hover {
+            @apply shadow-xl border-verde-lima/50;
+            transform: translateY(-2px);
+        }
+        #login-overlay {
+            background: rgba(45, 46, 50, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+
+<body class="min-h-screen">
+    <!-- Login State Guard -->
+    <div id="login-overlay" class="fixed inset-0 z-[100] flex flex-col items-center justify-center text-white hidden">
+        <span class="material-symbols-outlined text-6xl text-verde-lima mb-6">lock</span>
+        <h2 class="text-3xl font-bold mb-4 uppercase tracking-tighter">Acceso Restringido</h2>
+        <p class="text-white/60 mb-8 font-light">Debes iniciar sesión para acceder al panel de agentes.</p>
+        <button onclick="netlifyIdentity.open()"
+            class="bg-verde-lima text-asfalto px-10 py-4 font-bold uppercase tracking-widest hover:brightness-110 transition-all">
+            Iniciar Sesión
+        </button>
+    </div>
+
+    <header class="bg-white border-b border-asfalto/5 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="../../index.html" class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-3xl text-verde-lima">architecture</span>
+                    <h1 class="text-xl font-bold tracking-tight uppercase">Visión <span
+                            class="text-hormigon font-light">Urbana</span></h1>
+                </a>
+                <span class="h-6 w-px bg-asfalto/10"></span>
+                <span
+                    class="text-[10px] font-black uppercase tracking-widest bg-asfalto text-white px-2 py-0.5 rounded">Agentes</span>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <div id="user-info" class="hidden sm:flex items-center gap-3">
+                    <span id="user-email" class="text-xs font-bold text-hormigon"></span>
+                    <button onclick="netlifyIdentity.logout()"
+                        class="text-asfalto hover:text-red-500 transition-colors">
+                        <span class="material-symbols-outlined text-xl">logout</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <div class="mb-12">
+            <h2 class="text-4xl font-bold tracking-tight mb-2">Buscador Interno de Propiedades</h2>
+            <p class="text-hormigon">Acceso rápido a toda la cartera de Visión Urbana para agentes.</p>
+        </div>
+
+        <!-- Buscador -->
+        <div class="bg-white p-6 shadow-sm border border-asfalto/5 mb-10">
+            <div class="relative">
+                <span
+                    class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-hormigon text-2xl">search</span>
+                <input type="text" id="search-input"
+                    placeholder="Busca por palabra clave: pileta, stefenelli, lote, 3 dormitorios..."
+                    class="w-full pl-14 pr-6 py-5 bg-niebla border-none focus:ring-2 focus:ring-verde-lima text-lg font-medium outline-none transition-all" />
+            </div>
+            <div class="flex flex-wrap gap-3 mt-6">
+                <button
+                    class="filter-btn active bg-asfalto text-white px-4 py-2 text-xs font-bold uppercase tracking-widest"
+                    data-filter="todos">Todos</button>
+                <button
+                    class="filter-btn bg-white border border-asfalto/10 px-4 py-2 text-xs font-bold uppercase tracking-widest"
+                    data-filter="casa">Casas</button>
+                <button
+                    class="filter-btn bg-white border border-asfalto/10 px-4 py-2 text-xs font-bold uppercase tracking-widest"
+                    data-filter="lote">Lotes</button>
+                <button
+                    class="filter-btn bg-white border border-asfalto/10 px-4 py-2 text-xs font-bold uppercase tracking-widest"
+                    data-filter="alquiler">Alquileres</button>
+            </div>
+        </div>
+
+        <!-- Resultados -->
+        <div id="results-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Loader -->
+            <div class="col-span-full py-20 flex justify-center">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-verde-lima"></div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let propiedades = [];
+        const searchInput = document.getElementById('search-input');
+        const resultsGrid = document.getElementById('results-grid');
+        const overlay = document.getElementById('login-overlay');
+        const userEmail = document.getElementById('user-email');
+        const userInfo = document.getElementById('user-info');
+
+        // Netlify Identity Management
+        function checkUser(user) {
+            if (user) {
+                overlay.classList.add('hidden');
+                userInfo.classList.remove('hidden');
+                userEmail.textContent = user.email;
+                loadData();
+            } else {
+                overlay.classList.remove('hidden');
+                resultsGrid.innerHTML = '';
+            }
+        }
+
+        netlifyIdentity.on('init', checkUser);
+        netlifyIdentity.on('login', checkUser);
+        netlifyIdentity.on('logout', () => checkUser(null));
+
+        async function loadData() {
+            try {
+                const response = await fetch('../../data/propiedades.json');
+                propiedades = await response.json();
+                renderPropiedades(propiedades);
+            } catch (error) {
+                console.error('Error cargando propiedades:', error);
+                resultsGrid.innerHTML = `<p class="col-span-full text-center py-20 text-red-500 font-bold">Error al cargar los datos.</p>`;
+            }
+        }
+
+        function renderPropiedades(data) {
+            if (data.length === 0) {
+                resultsGrid.innerHTML = `<div class="col-span-full py-20 text-center text-hormigon italic">No se encontraron propiedades que coincidan con la búsqueda.</div>`;
+                return;
+            }
+
+            resultsGrid.innerHTML = data.map(p => `
+                <div class="agent-card bg-white border border-asfalto/5 group">
+                    <div class="relative aspect-video overflow-hidden">
+                        <img src="${p.imagen}" alt="${p.titulo}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="bg-asfalto text-white text-[9px] font-bold px-3 py-1 tracking-widest uppercase">${p.operacion}</span>
+                            <span class="bg-verde-lima text-asfalto text-[9px] font-bold px-3 py-1 tracking-widest uppercase">${p.tipo}</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold leading-tight flex-1 pr-4">${p.titulo}</h3>
+                            <p class="text-verde-lima font-black text-lg whitespace-nowrap">${p.precio}</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            ${p.etiquetas.map(e => `<span class="bg-niebla text-hormigon text-[9px] font-bold px-2 py-1 rounded uppercase">${e}</span>`).join('')}
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-6 text-hormigon text-[11px] font-bold uppercase tracking-wider">
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-lg text-asfalto/30">square_foot</span>
+                                ${p.superficie}
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-lg text-asfalto/30">location_on</span>
+                                ${p.ubicacion}
+                            </div>
+                            ${p.dormitorios ? `
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-lg text-asfalto/30">bed</span>
+                                ${p.dormitorios} Dorm.
+                            </div>` : ''}
+                        </div>
+                        <a href="${p.link}" class="block w-full text-center py-3 border border-asfalto text-asfalto text-xs font-bold uppercase tracking-widest hover:bg-asfalto hover:text-white transition-all">
+                            Ver Ficha Técnica
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Buscador
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = propiedades.filter(p => {
+                const searchString = `${p.titulo} ${p.descripcion} ${p.tipo} ${p.ubicacion} ${p.etiquetas.join(' ')}`.toLowerCase();
+                return searchString.includes(term);
+            });
+            renderPropiedades(filtered);
+        });
+
+        // Filtros rápidos
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active', 'bg-asfalto', 'text-white'));
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.add('bg-white', 'text-asfalto'));
+
+                btn.classList.add('active', 'bg-asfalto', 'text-white');
+                btn.classList.remove('bg-white', 'text-asfalto');
+
+                const filter = btn.dataset.filter;
+                if (filter === 'todos') {
+                    renderPropiedades(propiedades);
+                } else if (filter === 'alquiler') {
+                    renderPropiedades(propiedades.filter(p => p.operacion.toLowerCase() === 'alquiler'));
+                } else {
+                    renderPropiedades(propiedades.filter(p => p.tipo.toLowerCase() === filter));
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

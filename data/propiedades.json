@@ -1,0 +1,168 @@
+[
+  {
+    "id": "gelonch-3941",
+    "titulo": "Casa moderna en venta – Gelonch 3941",
+    "precio": "Consultar",
+    "tipo": "Casa",
+    "operacion": "Venta",
+    "ubicacion": "Gral. Roca",
+    "dormitorios": 2,
+    "baños": 1,
+    "superficie": "120m² cubiertos / 250m² lote",
+    "descripcion": "Diseño, comodidad y funcionalidad en una propiedad lista para disfrutar. Esta casa combina espacios amplios y bien distribuidos con un estilo contemporáneo que marca la diferencia. Cuenta con vestidor, baulera, cocina integrada y patio con parrilla.",
+    "imagen": "../../assets/propiedades/Casa moderna en venta – Gelonch 3941/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/Casa moderna en venta – Gelonch 3941/1.jpeg",
+      "../../assets/propiedades/Casa moderna en venta – Gelonch 3941/2.jpeg",
+      "../../assets/propiedades/Casa moderna en venta – Gelonch 3941/WhatsApp Image 2026-03-03 at 12.44.02 (1).jpeg",
+      "../../assets/propiedades/Casa moderna en venta – Gelonch 3941/WhatsApp Image 2026-03-03 at 12.44.02 (2).jpeg"
+    ],
+    "link": "../detalles/gelonch-3941.html",
+    "etiquetas": [
+      "moderna",
+      "estreno",
+      "diseño"
+    ]
+  },
+  {
+    "id": "ushuaia-1600",
+    "titulo": "Complejo de departamentos – Ushuaia 1600",
+    "precio": "Consultar",
+    "tipo": "Departamento",
+    "operacion": "Venta",
+    "ubicacion": "Barrio Los Olmos, Gral. Roca",
+    "dormitorios": 8,
+    "baños": 8,
+    "superficie": "321,70m² cubiertos / 300m² lote",
+    "descripcion": "Excelente oportunidad de inversión con renta activa. Complejo consolidado con 8 departamentos de 1 dormitorio, ideal para inversores que buscan ingresos mensuales y valorización a largo plazo.",
+    "imagen": "../../assets/propiedades/Complejo de departamentos-Ushuaia 1600/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/Complejo de departamentos-Ushuaia 1600/WhatsApp Image 2026-03-02 at 19.28.17.jpeg",
+      "../../assets/propiedades/Complejo de departamentos-Ushuaia 1600/WhatsApp Image 2026-03-02 at 19.28.18 (1).jpeg",
+      "../../assets/propiedades/Complejo de departamentos-Ushuaia 1600/WhatsApp Image 2026-03-02 at 19.28.18 (2).jpeg",
+      "../../assets/propiedades/Complejo de departamentos-Ushuaia 1600/WhatsApp Image 2026-03-02 at 19.28.19 (1).jpeg",
+      "../../assets/propiedades/Complejo de departamentos-Ushuaia 1600/WhatsApp Image 2026-03-02 at 19.28.19 (2).jpeg",
+      "../../assets/propiedades/Complejo de departamentos-Ushuaia 1600/WhatsApp Image 2028-03-02 at 19.28.19 (3).jpeg"
+    ],
+    "link": "../detalles/ushuaia-1600.html",
+    "etiquetas": [
+      "inversión",
+      "renta",
+      "complejo"
+    ]
+  },
+  {
+    "id": "dia-del-bancario-1700",
+    "titulo": "Hermosa casa en Día del Bancario 1700, Gral. Roca",
+    "precio": "USD 185.000",
+    "tipo": "Casa",
+    "operacion": "Venta",
+    "ubicacion": "Gral. Roca",
+    "dormitorios": 3,
+    "baños": 2,
+    "superficie": "142 m² cubiertos / 300 m² lote",
+    "descripcion": "Propiedad única con excelente ubicación. Cuenta con amplios dormitorios, living comedor luminoso, cocina sectorizada y un patio ideal para disfrutar en familia.",
+    "imagen": "../../assets/propiedades/Día del Bancario 1700/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/Día del Bancario 1700/portada.jpeg"
+    ],
+    "link": "../detalles/dia-del-bancario-1700.html",
+    "etiquetas": [
+      "Destacado",
+      "oportunidad"
+    ]
+  },
+  {
+    "id": "departamento-chacabuco",
+    "titulo": "Departamento en venta – Casco Céntrico, Gral. Roca",
+    "precio": "Consultar",
+    "tipo": "Departamento",
+    "operacion": "Venta",
+    "ubicacion": "Centro, Gral. Roca",
+    "dormitorios": 3,
+    "baños": 1,
+    "superficie": "Consultar",
+    "descripcion": "Excelente departamento de 3 dormitorios ubicado en el corazón de General Roca. Cuenta con cocina independiente, cochera propia y una ubicación estratégica sobre calle Chacabuco, ideal para vivienda o inversión.",
+    "imagen": "../../assets/propiedades/Departamento-Chacabuco/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/Departamento-Chacabuco/portada.jpeg",
+      "../../assets/propiedades/Departamento-Chacabuco/WhatsApp Image 2026-03-02 at 19.28.15 (1).jpeg",
+      "../../assets/propiedades/Departamento-Chacabuco/WhatsApp Image 2026-03-02 at 19.28.15 (2).jpeg",
+      "../../assets/propiedades/Departamento-Chacabuco/WhatsApp Image 2026-03-02 at 19.28.15 (3).jpeg",
+      "../../assets/propiedades/Departamento-Chacabuco/WhatsApp Image 2026-03-02 at 19.28.15.jpeg",
+      "../../assets/propiedades/Departamento-Chacabuco/WhatsApp Image 2026-03-02 at 19.28.16 (1).jpeg",
+      "../../assets/propiedades/Departamento-Chacabuco/WhatsApp Image 2026-03-02 at 19.28.16 (2).jpeg",
+      "../../assets/propiedades/Departamento-Chacabuco/WhatsApp Image 2026-03-02 at 19.28.16.jpeg",
+      "../../assets/propiedades/Departamento-Chacabuco/WhatsApp Image 2026-03-02 at 19.28.17 (1).jpeg"
+    ],
+    "link": "../detalles/departamento-chacabuco.html",
+    "etiquetas": [
+      "centro",
+      "oportunidad",
+      "cochera"
+    ]
+  },
+  {
+    "id": "las-grutas",
+    "titulo": "Propiedad moderna en venta – Las Grutas",
+    "precio": "Consultar",
+    "tipo": "Casa",
+    "operacion": "Venta",
+    "ubicacion": "Las Grutas, Río Negro",
+    "dormitorios": 3,
+    "baños": 2,
+    "superficie": "Consultar",
+    "descripcion": "Propiedad moderna con solo 2 años de antigüedad, ubicada a solo una cuadra y media de la 4ª bajada y a una cuadra del casino. Ideal para vivienda o inversión turística de alta rentabilidad.",
+    "imagen": "../../assets/propiedades/Propiedad en venta – Las Grutas/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/Propiedad en venta – Las Grutas/portada.jpeg",
+      "../../assets/propiedades/Propiedad en venta – Las Grutas/WhatsApp Image 2026-03-02 at 19.28.11 (1).jpeg",
+      "../../assets/propiedades/Propiedad en venta – Las Grutas/WhatsApp Image 2026-03-02 at 19.28.11.jpeg",
+      "../../assets/propiedades/Propiedad en venta – Las Grutas/WhatsApp Image 2026-03-02 at 19.28.12 (1).jpeg",
+      "../../assets/propiedades/Propiedad en venta – Las Grutas/WhatsApp Image 2026-03-02 at 19.28.12 (2).jpeg",
+      "../../assets/propiedades/Propiedad en venta – Las Grutas/WhatsApp Image 2026-03-02 at 19.28.12.jpeg",
+      "../../assets/propiedades/Propiedad en venta – Las Grutas/WhatsApp Image 2026-03-02 at 19.28.13 (1).jpeg",
+      "../../assets/propiedades/Propiedad en venta – Las Grutas/WhatsApp Image 2026-03-02 at 19.28.13 (2).jpeg",
+      "../../assets/propiedades/Propiedad en venta – Las Grutas/WhatsApp Image 2026-03-02 at 19.28.13 (3).jpeg",
+      "../../assets/propiedades/Propiedad en venta – Las Grutas/WhatsApp Image 2026-03-02 at 19.28.13.jpeg",
+      "../../assets/propiedades/Propiedad en venta – Las Grutas/WhatsApp Image 2026-03-02 at 19.28.14 (1).jpeg",
+      "../../assets/propiedades/Propiedad en venta – Las Grutas/WhatsApp Image 2026-03-02 at 19.28.14.jpeg"
+    ],
+    "link": "../detalles/las-grutas.html",
+    "etiquetas": [
+      "turismo",
+      "moderna",
+      "oportunidad"
+    ]
+  },
+  {
+    "id": "ph-2-departamentos",
+    "titulo": "Oportunidad para inversores – PH en venta (2 Deptos)",
+    "precio": "Consultar",
+    "tipo": "Casa",
+    "operacion": "Venta",
+    "ubicacion": "Gral. Roca, Río Negro",
+    "dormitorios": 2,
+    "baños": 2,
+    "superficie": "Consultar",
+    "descripcion": "Propiedad en PH compuesta por 2 departamentos de 1 dormitorio cada uno. Actualmente alquilados, ofreciendo renta activa desde el primer día. Ideal para inversores que buscan diversificar riesgo con ingresos mensuales asegurados.",
+    "imagen": "../../assets/propiedades/PH en venta-2 departamentos/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/PH en venta-2 departamentos/portada.jpeg",
+      "../../assets/propiedades/PH en venta-2 departamentos/WhatsApp Image 2026-03-02 at 19.28.08 (1).jpeg",
+      "../../assets/propiedades/PH en venta-2 departamentos/WhatsApp Image 2026-03-02 at 19.28.09 (1).jpeg",
+      "../../assets/propiedades/PH en venta-2 departamentos/WhatsApp Image 2026-03-02 at 19.28.09 (2).jpeg",
+      "../../assets/propiedades/PH en venta-2 departamentos/WhatsApp Image 2026-03-02 at 19.28.09.jpeg",
+      "../../assets/propiedades/PH en venta-2 departamentos/WhatsApp Image 2026-03-02 at 19.28.10 (1).jpeg",
+      "../../assets/propiedades/PH en venta-2 departamentos/WhatsApp Image 2026-03-02 at 19.28.10 (2).jpeg",
+      "../../assets/propiedades/PH en venta-2 departamentos/WhatsApp Image 2026-03-02 at 19.28.10 (3).jpeg",
+      "../../assets/propiedades/PH en venta-2 departamentos/WhatsApp Image 2026-03-02 at 19.28.10.jpeg"
+    ],
+    "link": "../detalles/ph-2-departamentos.html",
+    "etiquetas": [
+      "inversión",
+      "renta",
+      "oportunidad"
+    ]
+  }
+]

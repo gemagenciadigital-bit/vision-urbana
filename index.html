@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Visión Urbana | Expertos Inmobiliarios en Gral. Roca</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "verde-lima": "#D9E021",
+                        "asfalto": "#2D2E32",
+                        "hormigon": "#6D7278",
+                        "bruma-azul": "#B4C1D1",
+                        "niebla": "#F5F5F5",
+                        "cielo-urbano": "#D1E9F6",
+                    },
+                    fontFamily: {
+                        "heading": ["Space Grotesk", "sans-serif"],
+                        "body": ["Roboto", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body { 
+                @apply font-body text-asfalto bg-white;
+            }
+            h1, h2, h3, h4, h5, h6 { 
+                @apply font-heading;
+            }
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(45, 46, 50, 0.4), rgba(45, 46, 50, 0.7));
+        }
+        .property-card {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .property-card:hover {
+            transform: translateY(-8px);
+        }
+        .btn-primary {
+            @apply bg-verde-lima text-asfalto hover:brightness-105 transition-all;
+        }
+        .location-badge {
+            @apply bg-bruma-azul/20 text-asfalto text-[10px] font-bold px-3 py-1 rounded-sm uppercase tracking-wider;
+        }
+    </style>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+
+<body class="selection:bg-verde-lima selection:text-asfalto">
+    <header class="fixed top-0 left-0 right-0 z-50 glass-header border-b border-bruma-azul/30">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-3xl text-verde-lima">architecture</span>
+                <h1 class="text-xl font-bold tracking-tight uppercase text-asfalto">Visión <span
+                        class="text-hormigon font-light">Urbana</span></h1>
+            </a>
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-medium text-asfalto hover:text-verde-lima transition-colors"
+                    href="web/propiedades/index.html">Propiedades</a>
+                <a class="text-sm font-medium text-asfalto hover:text-verde-lima transition-colors"
+                    href="#servicios">Servicios</a>
+                <a class="text-sm font-medium text-asfalto hover:text-verde-lima transition-colors"
+                    href="#nosotros">Nosotros</a>
+                <a class="text-sm font-medium text-asfalto hover:text-verde-lima transition-colors"
+                    href="#contacto">Contacto</a>
+            </nav>
+            <div class="flex items-center gap-4 lg:gap-6">
+                <button class="hidden lg:flex items-center text-xs font-bold text-hormigon tracking-widest">
+                    ES <span class="material-symbols-outlined text-sm ml-1">expand_more</span>
+                </button>
+                <button
+                    class="hidden sm:block bg-asfalto text-white px-6 py-2.5 text-xs font-bold tracking-widest hover:bg-verde-lima hover:text-asfalto transition-all uppercase">
+                    Consulta Directa
+                </button>
+                <button onclick="toggleMobileMenu()"
+                    class="md:hidden flex items-center justify-center size-10 text-asfalto">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[100] bg-asfalto translate-x-full transition-transform duration-500 lg:hidden">
+        <div class="p-8">
+            <div class="flex justify-between items-center mb-16">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-3xl text-verde-lima">architecture</span>
+                    <h1 class="text-xl font-bold tracking-tight uppercase text-white">Visión <span
+                            class="text-bruma-azul font-light">Urbana</span></h1>
+                </div>
+                <button onclick="toggleMobileMenu()" class="text-white">
+                    <span class="material-symbols-outlined text-4xl">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-8">
+                <a onclick="toggleMobileMenu()"
+                    class="text-3xl font-bold text-white hover:text-verde-lima transition-all"
+                    href="web/propiedades/index.html">Propiedades</a>
+                <a onclick="toggleMobileMenu()"
+                    class="text-3xl font-bold text-white hover:text-verde-lima transition-all"
+                    href="#servicios">Servicios</a>
+                <a onclick="toggleMobileMenu()"
+                    class="text-3xl font-bold text-white hover:text-verde-lima transition-all"
+                    href="#nosotros">Nosotros</a>
+                <a onclick="toggleMobileMenu()"
+                    class="text-3xl font-bold text-white hover:text-verde-lima transition-all"
+                    href="#contacto">Contacto</a>
+                <div class="mt-8 border-t border-white/10 pt-8">
+                    <p class="text-bruma-azul text-sm mb-6 uppercase tracking-widest font-bold">Llámanos ahora</p>
+                    <a href="tel:+542984567890" class="text-2xl font-bold text-verde-lima">+54 298 456 7890</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <section
+        class="relative min-h-screen lg:h-[95vh] lg:min-h-[750px] flex flex-col justify-center py-20 lg:py-0 overflow-hidden">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <div class="w-full h-full bg-cover bg-center"
+                style="background-image: url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1920&q=80&fm=webp');"
+                fetchpriority="high">
+            </div>
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full mb-12 lg:mb-0">
+            <div class="max-w-4xl">
+                <span
+                    class="inline-block px-4 py-1.5 bg-verde-lima text-asfalto text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+                    Inmobiliaria &amp; Desarrollos
+                </span>
+                <h2
+                    class="text-white text-4xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-8 tracking-tight font-heading">
+                    Expertos en el Mercado <br /><span class="text-verde-lima">Inmobiliario de General Roca.</span>
+                </h2>
+                <p class="text-white/90 text-lg md:text-xl font-light mb-10 max-w-2xl leading-relaxed font-body">
+                    Encontrá tu próximo hogar o invertí en el lote ideal. Brindamos asesoría integral en compra, venta y
+                    tasaciones con transparencia y profesionalismo.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
+                    <a href="web/propiedades/index.html"
+                        class="btn-primary px-8 py-4 md:px-10 md:py-5 font-bold text-sm tracking-widest uppercase flex items-center justify-center gap-3">
+                        Ver Propiedades
+                        <span class="material-symbols-outlined text-lg">arrow_outward</span>
+                    </a>
+                    <a href="https://wa.me/5492984635406?text=Hola!%20Me%20interesa%20tasar%20mi%20propiedad."
+                        target="_blank"
+                        class="border border-white/40 hover:border-verde-lima hover:text-verde-lima text-white px-8 py-4 md:px-10 md:py-5 font-bold text-sm tracking-widest uppercase transition-all backdrop-blur-sm flex items-center justify-center gap-3">
+                        Tasá tu Propiedad
+                        <span class="material-symbols-outlined text-lg">whatsapp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt-48 pb-24 bg-niebla">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <h3 class="text-hormigon font-bold uppercase tracking-[0.3em] text-xs mb-3">Portfolio Regional</h3>
+                    <h2 class="text-asfalto text-4xl md:text-5xl font-bold tracking-tight">Propiedades Destacadas</h2>
+                </div>
+                <a class="text-asfalto font-bold text-xs uppercase tracking-widest flex items-center gap-2 group border-b-2 border-verde-lima pb-1"
+                    href="web/propiedades/index.html">
+                    Explorar catálogo <span
+                        class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">east</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <a href="web/detalles/dia-del-bancario-1700.html"
+                    class="property-card bg-white border border-bruma-azul/10 group block overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+                    <div class="relative h-72 overflow-hidden">
+                        <div class="absolute top-4 left-4 z-10 flex gap-2">
+                            <span
+                                class="bg-asfalto text-white text-[9px] font-bold px-3 py-1 tracking-widest uppercase">Venta</span>
+                            <span
+                                class="bg-primary text-asfalto text-[9px] font-bold px-3 py-1 tracking-widest uppercase">Destacada</span>
+                        </div>
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                            style="background-image: url('assets/propiedades/Día del Bancario 1700/portada.jpeg');">
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="location-badge">Gral. Roca</span>
+                            </div>
+                            <h4 class="text-2xl font-bold text-asfalto mb-2 group-hover:text-primary transition-colors">
+                                Día del Bancario 1700
+                            </h4>
+                            <p class="text-hormigon text-lg font-medium">USD 185.000</p>
+                        </div>
+                        <div
+                            class="flex items-center justify-between border-t border-bruma-azul/20 pt-6 text-hormigon text-xs font-bold uppercase tracking-widest">
+                            <span class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-lg text-primary">home</span> Casa</span>
+                            <span class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-lg text-primary">bed</span> 3 Dorm.</span>
+                            <span class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-lg text-primary">square_foot</span>
+                                142m²</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="web/detalles/gelonch-3941.html"
+                    class="property-card bg-white border border-bruma-azul/10 group block overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+                    <div class="relative h-72 overflow-hidden">
+                        <div class="absolute top-4 left-4 z-10 flex gap-2">
+                            <span
+                                class="bg-asfalto text-white text-[9px] font-bold px-3 py-1 tracking-widest uppercase">Venta</span>
+                            <span
+                                class="bg-primary text-asfalto text-[9px] font-bold px-3 py-1 tracking-widest uppercase">Nuevo
+                                diseño</span>
+                        </div>
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                            style="background-image: url('assets/propiedades/Casa moderna en venta – Gelonch 3941/portada.jpeg');">
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="location-badge">Gral. Roca</span>
+                            </div>
+                            <h4 class="text-2xl font-bold text-asfalto mb-2 group-hover:text-primary transition-colors">
+                                Gelonch 3941
+                            </h4>
+                            <p class="text-hormigon text-lg font-medium">Consultar Precio</p>
+                        </div>
+                        <div
+                            class="flex items-center justify-between border-t border-bruma-azul/20 pt-6 text-hormigon text-xs font-bold uppercase tracking-widest">
+                            <span class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-lg text-primary">home</span> Casa</span>
+                            <span class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-lg text-primary">bed</span> 2 Dorm.</span>
+                            <span class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-lg text-primary">square_foot</span>
+                                120m²</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="web/detalles/ushuaia-1600.html"
+                    class="property-card bg-white border border-bruma-azul/10 group block overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+                    <div class="relative h-72 overflow-hidden">
+                        <div class="absolute top-4 left-4 z-10 flex gap-2">
+                            <span
+                                class="bg-asfalto text-white text-[9px] font-bold px-3 py-1 tracking-widest uppercase">Venta</span>
+                            <span
+                                class="bg-primary text-asfalto text-[9px] font-bold px-3 py-1 tracking-widest uppercase">Inversión</span>
+                        </div>
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                            style="background-image: url('assets/propiedades/Complejo de departamentos-Ushuaia 1600/portada.jpeg');">
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="location-badge">B° Los Olmos</span>
+                            </div>
+                            <h4 class="text-2xl font-bold text-asfalto mb-2 group-hover:text-primary transition-colors">
+                                Complejo Ushuaia 1600
+                            </h4>
+                            <p class="text-hormigon text-lg font-medium">Renta Activa</p>
+                        </div>
+                        <div
+                            class="flex items-center justify-between border-t border-bruma-azul/20 pt-6 text-hormigon text-xs font-bold uppercase tracking-widest">
+                            <span class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-lg text-primary">apartment</span> 8
+                                Deptos</span>
+                            <span class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-lg text-primary">history</span> 12 Años</span>
+                            <span class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-lg text-primary">square_foot</span>
+                                321m²</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="bg-cielo-urbano py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/3">
+                    <h3 class="text-asfalto font-bold uppercase tracking-[0.3em] text-xs mb-4">Servicios Profesionales
+                    </h3>
+                    <h2 class="text-4xl md:text-5xl font-bold text-asfalto leading-tight mb-8">Soluciones con Visión
+                        Urbana.</h2>
+                    <div class="h-1 w-20 bg-verde-lima mb-8"></div>
+                    <p class="text-hormigon leading-relaxed">
+                        Maximizamos el valor de tu propiedad en General Roca a través de un enfoque integral y moderno
+                        que combina experiencia local y marketing de vanguardia.
+                    </p>
+                </div>
+                <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <a href="web/propiedades/index.html?tipo=Casa"
+                        class="block bg-white p-10 border border-bruma-azul/20 hover:border-verde-lima transition-all group">
+                        <span
+                            class="material-symbols-outlined text-4xl text-asfalto mb-6 group-hover:text-verde-lima transition-colors">real_estate_agent</span>
+                        <h4 class="text-xl font-bold mb-4 uppercase tracking-tight">Venta de Casas y Lotes</h4>
+                        <p class="text-hormigon text-sm leading-relaxed">Asesoramiento especializado en el mercado
+                            residencial y de terrenos en zonas en desarrollo de Río Negro.</p>
+                    </a>
+                    <a href="web/propiedades/index.html?operacion=Alquiler"
+                        class="block bg-white p-10 border border-bruma-azul/20 hover:border-verde-lima transition-all group">
+                        <span
+                            class="material-symbols-outlined text-4xl text-asfalto mb-6 group-hover:text-verde-lima transition-colors">key</span>
+                        <h4 class="text-xl font-bold mb-4 uppercase tracking-tight">Alquileres</h4>
+                        <p class="text-hormigon text-sm leading-relaxed">Gestión eficiente de propiedades con un
+                            riguroso proceso de selección de inquilinos.</p>
+                    </a>
+                    <div class="bg-white p-10 border border-bruma-azul/20 hover:border-verde-lima transition-all group">
+                        <span
+                            class="material-symbols-outlined text-4xl text-asfalto mb-6 group-hover:text-verde-lima transition-colors">analytics</span>
+                        <h4 class="text-xl font-bold mb-4 uppercase tracking-tight">Tasaciones Profesionales</h4>
+                        <p class="text-hormigon text-sm leading-relaxed">Valuaciones precisas y realistas basadas en el
+                            conocimiento profundo del mercado local.</p>
+                    </div>
+                    <div class="bg-white p-10 border border-bruma-azul/20 hover:border-verde-lima transition-all group">
+                        <span
+                            class="material-symbols-outlined text-4xl text-asfalto mb-6 group-hover:text-verde-lima transition-colors">movie_filter</span>
+                        <h4 class="text-xl font-bold mb-4 uppercase tracking-tight">Contenido Audiovisual</h4>
+                        <p class="text-hormigon text-sm leading-relaxed">Producción cinematográfica y fotografía premium
+                            para destacar cada detalle de su propiedad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="bg-niebla p-10 border-l-4 border-bruma-azul">
+                        <span class="material-symbols-outlined text-asfalto text-4xl mb-6">verified_user</span>
+                        <h5 class="font-bold text-lg mb-3 uppercase tracking-tight">Transparencia</h5>
+                        <p class="text-xs text-hormigon font-medium leading-loose">Gestión clara y procesos certificados
+                            en cada operación en General Roca.</p>
+                    </div>
+                    <div class="bg-niebla p-10 border-l-4 border-verde-lima">
+                        <span class="material-symbols-outlined text-asfalto text-4xl mb-6">military_tech</span>
+                        <h5 class="font-bold text-lg mb-3 uppercase tracking-tight">Trayectoria</h5>
+                        <p class="text-xs text-hormigon font-medium leading-loose">Liderando el sector inmobiliario con
+                            excelencia y compromiso en la región.</p>
+                    </div>
+                    <div class="bg-niebla p-10 border-l-4 border-verde-lima">
+                        <span
+                            class="material-symbols-outlined text-asfalto text-4xl mb-6">face_retouching_natural</span>
+                        <h5 class="font-bold text-lg mb-3 uppercase tracking-tight">Personalización</h5>
+                        <p class="text-xs text-hormigon font-medium leading-loose">Atención a medida adaptada a tus
+                            objetivos de inversión o vivienda familiar.</p>
+                    </div>
+                    <div class="bg-niebla p-10 border-l-4 border-bruma-azul">
+                        <span class="material-symbols-outlined text-asfalto text-4xl mb-6">biotech</span>
+                        <h5 class="font-bold text-lg mb-3 uppercase tracking-tight">Tecnología</h5>
+                        <p class="text-xs text-hormigon font-medium leading-loose">Uso de herramientas digitales de
+                            vanguardia para potenciar la visibilidad.</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-hormigon font-bold uppercase tracking-[0.3em] text-xs mb-4">Nuestra Identidad</h3>
+                    <h2 class="text-4xl md:text-6xl font-bold text-asfalto mb-10 tracking-tight leading-[1.1]">Por qué
+                        elegir <br /><span class="text-verde-lima">Visión Urbana</span></h2>
+                    <p class="text-asfalto/70 text-lg font-light mb-10 leading-relaxed">
+                        Somos tu aliada estratégica en General Roca. Especialistas en casas y terrenos, con tecnología
+                        de vanguardia y contenido audiovisual de alto impacto para potenciar cada venta. Contamos con
+                        una sólida <strong>posibilidad de expansión a todo Río Negro</strong>, conectando inversores con
+                        oportunidades únicas.
+                    </p>
+                    <a href="https://wa.me/5492984635406" target="_blank"
+                        class="bg-asfalto text-white px-10 py-5 font-bold text-xs tracking-widest uppercase flex items-center gap-4 hover:bg-verde-lima hover:text-asfalto transition-all">
+                        Agendar una Cita
+                        <span class="material-symbols-outlined">calendar_today</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="contacto" class="bg-asfalto text-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-8">
+                        <span class="material-symbols-outlined text-3xl text-verde-lima">architecture</span>
+                        <h1 class="text-xl font-bold tracking-tight uppercase text-white">Visión <span
+                                class="text-bruma-azul font-light">Urbana</span></h1>
+                    </div>
+                    <p class="text-bruma-azul text-sm leading-relaxed mb-10 max-w-xs">
+                        Líderes en el mercado de propiedades y desarrollos en General Roca, Río Negro.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="w-12 h-12 border border-white/10 flex items-center justify-center hover:bg-verde-lima hover:text-asfalto transition-all"
+                            href="#"><span class="material-symbols-outlined text-xl">share</span></a>
+                        <a class="w-12 h-12 border border-white/10 flex items-center justify-center hover:bg-verde-lima hover:text-asfalto transition-all"
+                            href="#"><span class="material-symbols-outlined text-xl">camera</span></a>
+                        <a class="w-12 h-12 border border-white/10 flex items-center justify-center hover:bg-verde-lima hover:text-asfalto transition-all"
+                            href="#"><span class="material-symbols-outlined text-xl">mail</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h6 class="text-verde-lima font-bold uppercase tracking-[0.2em] text-[10px] mb-10">Explorar</h6>
+                    <ul class="flex flex-col gap-5 text-sm font-medium text-bruma-azul">
+                        <li><a class="hover:text-verde-lima transition-colors" href="web/propiedades/index.html">Casas y
+                                Lotes</a></li>
+                        <li><a class="hover:text-verde-lima transition-colors" href="#servicios">Tasaciones</a></li>
+                        <li><a class="hover:text-verde-lima transition-colors"
+                                href="web/propiedades/index.html">Venta/Alquiler</a></li>
+                        <li><a class="hover:text-verde-lima transition-colors"
+                                href="web/propiedades/index.html?destacado=true">Propiedades Destacadas</a></li>
+                        <li class="pt-4 border-t border-white/5"><a
+                                class="text-primary hover:brightness-110 transition-all font-bold text-xs"
+                                href="web/agentes/index.html">ACCESO EQUIPO</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="text-verde-lima font-bold uppercase tracking-[0.2em] text-[10px] mb-10">Compañía</h6>
+                    <ul class="flex flex-col gap-5 text-sm font-medium text-bruma-azul">
+                        <li><a class="hover:text-verde-lima transition-colors" href="#">Sobre Nosotros</a></li>
+                        <li><a class="hover:text-verde-lima transition-colors" href="#">Nuestro Equipo</a></li>
+                        <li><a class="hover:text-verde-lima transition-colors" href="#">Noticias</a></li>
+                        <li><a class="hover:text-verde-lima transition-colors" href="#">Carreras</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="text-verde-lima font-bold uppercase tracking-[0.2em] text-[10px] mb-10">Contacto</h6>
+                    <ul class="flex flex-col gap-5 text-sm font-medium text-bruma-azul">
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-verde-lima text-lg">alternate_email</span>
+                            info@visionurbana.com
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-verde-lima text-lg">call</span>
+                            +54 298 456 7890
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-verde-lima text-lg">pin_drop</span>
+                            General Roca, Río Negro,<br />Patagonia, Argentina
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] font-bold text-hormigon uppercase tracking-[0.3em]">
+                <p>© 2024 Visión Urbana Gral. Roca. Curated Real Estate Services.</p>
+                <div class="flex gap-12">
+                    <a class="hover:text-white transition-colors" href="#">Privacidad</a>
+                    <a class="hover:text-white transition-colors" href="#">Términos</a>
+                    <a class="hover:text-white transition-colors" href="#">Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('translate-x-full')) {
+                menu.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('translate-x-full');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/web/agentes/index.html";
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

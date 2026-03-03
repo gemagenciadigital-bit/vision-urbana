@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Visión Urbana | Propiedades en General Roca</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Roboto:wght@300;400;500&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d9df20",
+                        "asfalto": "#2D2E32",
+                        "background-light": "#f8f8f6",
+                        "background-dark": "#202111",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Roboto", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-asfalto">
+    <header class="sticky top-0 z-50 bg-asfalto text-white shadow-md px-6 md:px-12 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="../../index.html" class="flex items-center gap-3">
+                <div class="bg-primary p-1.5 rounded-lg">
+                    <span class="material-symbols-outlined text-asfalto text-2xl font-bold">domain</span>
+                </div>
+                <h1 class="text-xl font-bold tracking-tight uppercase">Visión Urbana</h1>
+            </a>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Propiedades</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors"
+                    href="index.html?tipo=Lote">Lotes</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors"
+                    href="../../index.html#nosotros">Nosotros</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors"
+                    href="../../index.html#contacto">Contacto</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button
+                    class="hidden lg:flex items-center gap-2 bg-primary text-asfalto px-5 py-2 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity">
+                    <span class="material-symbols-outlined text-sm">login</span>
+                    Ingresar
+                </button>
+                <button onclick="toggleMobileMenu()"
+                    class="md:hidden text-white flex items-center justify-center size-10">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[100] bg-asfalto translate-x-full transition-transform duration-500 md:hidden">
+        <div class="p-8">
+            <div class="flex justify-between items-center mb-16">
+                <div class="flex items-center gap-2">
+                    <div class="bg-primary p-1.5 rounded-lg">
+                        <span class="material-symbols-outlined text-asfalto text-2xl font-bold">domain</span>
+                    </div>
+                    <h1 class="text-xl font-bold tracking-tight uppercase text-white">Visión Urbana</h1>
+                </div>
+                <button onclick="toggleMobileMenu()" class="text-white">
+                    <span class="material-symbols-outlined text-4xl">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-8">
+                <a onclick="toggleMobileMenu()" class="text-3xl font-bold text-white hover:text-primary transition-all"
+                    href="index.html">Propiedades</a>
+                <a onclick="toggleMobileMenu()" class="text-3xl font-bold text-white hover:text-primary transition-all"
+                    href="index.html?tipo=Lote">Lotes</a>
+                <a onclick="toggleMobileMenu()" class="text-3xl font-bold text-white hover:text-primary transition-all"
+                    href="../../index.html#nosotros">Nosotros</a>
+                <a onclick="toggleMobileMenu()" class="text-3xl font-bold text-white hover:text-primary transition-all"
+                    href="../../index.html#contacto">Contacto</a>
+                <div class="mt-8 border-t border-white/10 pt-8">
+                    <p class="text-zinc-400 text-sm mb-6 uppercase tracking-widest font-bold">Llámanos ahora</p>
+                    <a href="tel:+542984567890" class="text-2xl font-bold text-primary">+54 298 456 7890</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <main class="max-w-7xl mx-auto px-4 md:px-8 py-8">
+        <div
+            class="bg-white dark:bg-zinc-900 rounded-xl shadow-sm border border-zinc-100 dark:border-zinc-800 p-4 mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 items-end">
+                <div class="lg:col-span-2">
+                    <label class="block text-xs font-bold text-zinc-500 uppercase mb-2 px-1">Búsqueda</label>
+                    <div class="relative">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400">search</span>
+                        <input
+                            class="w-full pl-10 pr-4 py-2 bg-zinc-50 dark:bg-zinc-800 border-none rounded-lg focus:ring-2 focus:ring-primary text-sm"
+                            placeholder="Palabra clave o zona..." type="text" />
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-zinc-500 uppercase mb-2 px-1">Propiedad</label>
+                    <select
+                        class="w-full px-3 py-2 bg-zinc-50 dark:bg-zinc-800 border-none rounded-lg focus:ring-2 focus:ring-primary text-sm appearance-none cursor-pointer">
+                        <option>Todos</option>
+                        <option>Casa</option>
+                        <option>Lote</option>
+                        <option>Departamento</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-zinc-500 uppercase mb-2 px-1">Operación</label>
+                    <select
+                        class="w-full px-3 py-2 bg-zinc-50 dark:bg-zinc-800 border-none rounded-lg focus:ring-2 focus:ring-primary text-sm appearance-none cursor-pointer">
+                        <option>Todos</option>
+                        <option>Venta</option>
+                        <option>Alquiler</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-zinc-500 uppercase mb-2 px-1">Dormitorios</label>
+                    <select
+                        class="w-full px-3 py-2 bg-zinc-50 dark:bg-zinc-800 border-none rounded-lg focus:ring-2 focus:ring-primary text-sm appearance-none cursor-pointer">
+                        <option>Todos</option>
+                        <option>1+</option>
+                        <option>2+</option>
+                        <option>3+</option>
+                    </select>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <button
+                        class="w-full bg-primary text-asfalto font-bold py-2 rounded-lg text-sm flex items-center justify-center gap-2 hover:brightness-105 transition-all">
+                        <span class="material-symbols-outlined text-sm">filter_alt</span>
+                        Filtrar
+                    </button>
+                    <a class="text-center text-xs text-zinc-400 hover:text-asfalto transition-colors" href="#">Limpiar
+                        Filtros</a>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div>
+                <h2 class="text-3xl font-bold tracking-tight">Propiedades en General Roca</h2>
+                <p class="text-zinc-500 mt-1">12 Propiedades encontradas en General Roca, Río Negro</p>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="text-sm text-zinc-400">Ordenar por:</span>
+                <select class="bg-transparent border-none text-sm font-medium focus:ring-0 cursor-pointer">
+                    <option>Más recientes</option>
+                    <option>Precio: Menor a Mayor</option>
+                    <option>Precio: Mayor a Menor</option>
+                </select>
+            </div>
+        </div>
+        <div id="properties-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Properties will be injected here -->
+            <div class="col-span-full py-20 flex flex-col items-center justify-center text-zinc-400">
+                <span class="material-symbols-outlined text-6xl mb-4 animate-pulse">downloading</span>
+                <p class="font-medium">Cargando catálogo de propiedades...</p>
+            </div>
+        </div>
+
+        <!-- Pagination (Hidden for now as we have few properties) -->
+        <div id="pagination" class="flex justify-center mt-16 hidden">
+            <nav class="flex items-center gap-2">
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-200 hover:bg-primary hover:border-primary transition-all">
+                    <span class="material-symbols-outlined text-sm">chevron_left</span>
+                </button>
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-asfalto font-bold">1</button>
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-200 hover:bg-primary hover:border-primary transition-all">
+                    <span class="material-symbols-outlined text-sm">chevron_right</span>
+                </button>
+            </nav>
+        </div>
+    </main>
+    <footer id="contacto" class="bg-asfalto text-white pt-16 pb-8 mt-20">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-zinc-800 pb-12">
+                <div class="space-y-4">
+                    <a href="../../index.html" class="flex items-center gap-3">
+                        <div class="bg-primary p-1 rounded">
+                            <span class="material-symbols-outlined text-asfalto text-xl font-bold">domain</span>
+                        </div>
+                        <h2 class="text-lg font-bold tracking-tight uppercase">Visión Urbana</h2>
+                    </a>
+                    <p class="text-zinc-400 text-sm leading-relaxed">Expertos en el mercado inmobiliario de General
+                        Roca. Brindamos asesoramiento integral para que encuentres el hogar de tus sueños.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-primary">Navegación</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li><a class="hover:text-white transition-colors" href="index.html">Propiedades</a></li>
+                        <li><a class="hover:text-white transition-colors"
+                                href="../../index.html#tasaciones">Tasaciones</a></li>
+                        <li><a class="hover:text-white transition-colors" href="../../index.html#nosotros">Nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-primary">Contacto</h4>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                            <span>General Roca, Río Negro</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary text-lg">call</span>
+                            <span>+54 9 298 463-5406</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-primary">Seguinos</h4>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/vision.urbana.inmobiliaria" target="_blank"
+                            class="size-10 rounded-lg bg-zinc-800 flex items-center justify-center hover:bg-primary hover:text-asfalto transition-all">
+                            <span class="material-symbols-outlined">camera</span>
+                        </a>
+                        <a href="https://wa.me/5492984635406" target="_blank"
+                            class="size-10 rounded-lg bg-zinc-800 flex items-center justify-center hover:bg-primary hover:text-asfalto transition-all">
+                            <span class="material-symbols-outlined">chat</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-500">
+                <p>© 2024 Visión Urbana Inmobiliaria. Todos los derechos reservados.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-white" href="#">Aviso Legal</a>
+                    <a class="hover:text-white" href="#">Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let allProperties = [];
+
+        async function init() {
+            const grid = document.getElementById('properties-grid');
+            try {
+                const response = await fetch('../../data/propiedades.json');
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                allProperties = await response.json();
+
+                // Parse URL parameters
+                const urlParams = new URLSearchParams(window.location.search);
+                const tipoParam = urlParams.get('tipo');
+                const operacionParam = urlParams.get('operacion');
+                const destacadoParam = urlParams.get('destacado');
+
+                // Set initial values in UI if params exist
+                const selects = document.querySelectorAll('select');
+                if (tipoParam && selects[0]) {
+                    if ([...selects[0].options].some(opt => opt.value === tipoParam)) selects[0].value = tipoParam;
+                }
+                if (operacionParam && selects[1]) {
+                    if ([...selects[1].options].some(opt => opt.value === operacionParam)) selects[1].value = operacionParam;
+                }
+
+                filterProperties();
+            } catch (error) {
+                console.error("Error detallado:", error);
+                if (grid) {
+                    grid.innerHTML = `
+                        <div class="col-span-full py-20 text-center text-red-500">
+                            <span class="material-symbols-outlined text-6xl mb-4">error</span>
+                            <p class="text-xl font-bold mb-2">No se pudo cargar el catálogo</p>
+                            <p class="text-sm opacity-70">Error: ${error.message}</p>
+                            <button onclick="location.reload()" class="mt-6 px-6 py-2 bg-asfalto text-white rounded-lg font-bold text-sm hover:bg-primary hover:text-asfalto transition-all">Reintentar</button>
+                        </div>
+                    `;
+                }
+            }
+        }
+
+        function renderProperties(properties) {
+            const grid = document.getElementById('properties-grid');
+            if (!grid) return;
+
+            if (properties.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full py-20 text-center text-zinc-500">
+                        <span class="material-symbols-outlined text-6xl mb-4">search_off</span>
+                        <p>No se encontraron propiedades con esos filtros.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = properties.map(prop => `
+                <a href="${prop.link}" class="group bg-white dark:bg-zinc-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-zinc-100 dark:border-zinc-800 block">
+                    <div class="relative aspect-[4/3] overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style="background-image: url('${prop.imagen}')"></div>
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="bg-asfalto/80 text-white text-[10px] font-bold uppercase px-2 py-1 rounded backdrop-blur-sm">${prop.operacion}</span>
+                            ${prop.etiquetas && prop.etiquetas.includes('Destacado') ? '<span class="bg-primary text-asfalto text-[10px] font-bold uppercase px-2 py-1 rounded">Destacado</span>' : ''}
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-asfalto/80 to-transparent">
+                            <p class="text-white text-2xl font-bold">${prop.precio}</p>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="bg-zinc-100 dark:bg-zinc-800 text-zinc-500 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">${prop.tipo}</span>
+                            <span class="text-zinc-400 text-[10px] font-bold uppercase tracking-wider">${prop.ubicacion}</span>
+                        </div>
+                        <h3 class="text-lg font-bold leading-tight group-hover:text-primary transition-colors">
+                            ${prop.titulo}
+                        </h3>
+                        <p class="text-zinc-500 text-sm mt-2 line-clamp-2 font-body">${prop.descripcion}</p>
+                        <div class="flex items-center justify-between mt-6 border-y border-zinc-50 dark:border-zinc-800 py-3">
+                            <div class="flex items-center gap-1.5 text-zinc-600 dark:text-zinc-400">
+                                <span class="material-symbols-outlined text-sm">${prop.tipo === 'Lote' || prop.tipo === 'Terreno' ? 'landscape' : 'bed'}</span>
+                                <span class="text-xs font-medium">${prop.tipo === 'Lote' || prop.tipo === 'Terreno' ? 'Terreno' : (prop.dormitorios || '0') + ' Dorm.'}</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 text-zinc-600 dark:text-zinc-400">
+                                <span class="material-symbols-outlined text-sm">square_foot</span>
+                                <span class="text-xs font-medium">${(prop.superficie || '0 m²').split(' ')[0]}</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between text-primary font-bold text-sm">
+                            <span>Ver detalles</span>
+                            <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">east</span>
+                        </div>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        function updateCount(count) {
+            const countEl = document.querySelector('main h2 + p');
+            if (countEl) {
+                countEl.textContent = `${count} ${count === 1 ? 'Propiedad encontrada' : 'Propiedades encontradas'} en General Roca, Río Negro`;
+            }
+        }
+
+        function filterProperties() {
+            const searchTerm = document.querySelector('input[type="text"]').value.toLowerCase();
+            const selects = document.querySelectorAll('select');
+            const typeFilter = selects[0].value;
+            const opFilter = selects[1].value;
+            const dormantFilter = selects[2].value;
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const destacadoOnly = urlParams.get('destacado') === 'true';
+
+            const filtered = allProperties.filter(prop => {
+                const matchesSearch = prop.titulo.toLowerCase().includes(searchTerm) ||
+                    prop.ubicacion.toLowerCase().includes(searchTerm) ||
+                    prop.descripcion.toLowerCase().includes(searchTerm);
+
+                const matchesType = typeFilter === 'Todos' || prop.tipo === typeFilter;
+                const matchesOp = opFilter === 'Todos' || prop.operacion === opFilter;
+
+                let matchesDorm = true;
+                if (dormantFilter !== 'Todos') {
+                    const minDorms = parseInt(dormantFilter);
+                    matchesDorm = parseInt(prop.dormitorios || 0) >= minDorms;
+                }
+
+                const matchesDestacado = !destacadoOnly || (prop.etiquetas && prop.etiquetas.includes('Destacado'));
+
+                return matchesSearch && matchesType && matchesOp && matchesDorm && matchesDestacado;
+            });
+
+            renderProperties(filtered);
+            updateCount(filtered.length);
+        }
+
+        document.querySelector('input[type="text"]').addEventListener('input', filterProperties);
+        document.querySelectorAll('select').forEach(sel => sel.addEventListener('change', filterProperties));
+
+        // Handle filter button click
+        const filterBtn = document.querySelector('button.bg-primary');
+        if (filterBtn) filterBtn.addEventListener('click', filterProperties);
+
+        // Handle clear filters
+        const clearBtn = document.querySelector('a.text-zinc-400');
+        if (clearBtn) {
+            clearBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector('input[type="text"]').value = '';
+                document.querySelectorAll('select').forEach(s => s.selectedIndex = 0);
+                window.history.replaceState({}, document.title, window.location.pathname);
+                filterProperties();
+            });
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu) {
+                menu.classList.toggle('translate-x-full');
+                document.body.style.overflow = menu.classList.contains('translate-x-full') ? 'auto' : 'hidden';
+            }
+        }
+
+        init();
+    </script>
+</body>
+
+</html>
