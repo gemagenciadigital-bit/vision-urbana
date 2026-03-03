@@ -267,6 +267,8 @@
 
     <script>
         let allProperties = [];
+        let currentPage = 1;
+        const pageSize = 6;
 
         async function init() {
             const grid = document.getElementById('properties-grid');
@@ -293,6 +295,9 @@
                 if (operacionParam && selects[1]) {
                     if ([...selects[1].options].some(opt => opt.value === operacionParam)) selects[1].value = operacionParam;
                 }
+
+                // Initial sort: Newest first
+                allProperties.reverse();
 
                 filterProperties();
             } catch (error) {
@@ -321,10 +326,14 @@
                         <p>No se encontraron propiedades con esos filtros.</p>
                     </div>
                 `;
+                document.getElementById('pagination').classList.add('hidden');
                 return;
             }
 
-            grid.innerHTML = properties.map(prop => `
+            const start = (currentPage - 1) * pageSize;
+            const paginated = properties.slice(start, start + pageSize);
+
+            grid.innerHTML = paginated.map(prop => `
                 <a href="${prop.link}" class="group bg-white dark:bg-zinc-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-zinc-100 dark:border-zinc-800 block">
                     <div class="relative aspect-[4/3] overflow-hidden">
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
@@ -372,7 +381,51 @@
             }
         }
 
-        function filterProperties() {
+        function renderPagination(total) {
+            const nav = document.getElementById('pagination');
+            const container = nav.querySelector('nav');
+            const totalPages = Math.ceil(total / pageSize);
+
+            if (totalPages <= 1) {
+                nav.classList.add('hidden');
+                return;
+            }
+
+            nav.classList.remove('hidden');
+            let html = `
+                <button onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''} 
+                    class="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-200 hover:bg-primary hover:border-primary disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:border-zinc-200 transition-all">
+                    <span class="material-symbols-outlined text-sm">chevron_left</span>
+                </button>
+            `;
+
+            for (let i = 1; i <= totalPages; i++) {
+                html += `
+                    <button onclick="changePage(${i})" 
+                        class="w-10 h-10 flex items-center justify-center rounded-lg font-bold transition-all ${currentPage === i ? 'bg-primary text-asfalto' : 'border border-zinc-200 hover:bg-primary/20'}">
+                        ${i}
+                    </button>
+                `;
+            }
+
+            html += `
+                <button onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''} 
+                    class="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-200 hover:bg-primary hover:border-primary disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:border-zinc-200 transition-all">
+                    <span class="material-symbols-outlined text-sm">chevron_right</span>
+                </button>
+            `;
+
+            container.innerHTML = html;
+        }
+
+        function changePage(page) {
+            currentPage = page;
+            filterProperties(false); // don't reset to page 1
+            window.scrollTo({ top: 300, behavior: 'smooth' });
+        }
+
+        function filterProperties(resetPage = true) {
+            if (resetPage) currentPage = 1;
             const searchTerm = document.querySelector('input[type="text"]').value.toLowerCase();
             const selects = document.querySelectorAll('select');
             const typeFilter = selects[0].value;
@@ -403,6 +456,7 @@
 
             renderProperties(filtered);
             updateCount(filtered.length);
+            renderPagination(filtered.length);
         }
 
         document.querySelector('input[type="text"]').addEventListener('input', filterProperties);
