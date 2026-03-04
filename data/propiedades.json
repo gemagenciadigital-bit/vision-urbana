@@ -341,5 +341,36 @@
       "Pileta",
       "Naturaleza"
     ]
+  },
+  {
+    "id": "duplex-lisandro",
+    "titulo": "Dúplex en venta – Lisandro de la Torre",
+    "precio": "$95.000",
+    "tipo": "Dúplex",
+    "operacion": "Venta",
+    "ubicacion": "Lisandro de la Torre, Gral. Roca",
+    "dormitorios": 3,
+    "baños": 2,
+    "superficie": "190 m² cubiertos",
+    "descripcion": "Funcional, cómodo y bien distribuido, este dúplex es una excelente oportunidad tanto para vivienda familiar como para inversión. Cuenta con 3 dormitorios, garaje, parrilla y una ubicación estratégica.",
+    "imagen": "../../assets/propiedades/Dúplex - Lisandro de la Torre/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/Dúplex - Lisandro de la Torre/portada.jpeg",
+      "../../assets/propiedades/Dúplex - Lisandro de la Torre/WhatsApp Image 2026-02-11 at 18.06.39 (1).jpeg",
+      "../../assets/propiedades/Dúplex - Lisandro de la Torre/WhatsApp Image 2026-02-11 at 18.06.39 (2).jpeg",
+      "../../assets/propiedades/Dúplex - Lisandro de la Torre/WhatsApp Image 2026-02-11 at 18.06.40 (1).jpeg",
+      "../../assets/propiedades/Dúplex - Lisandro de la Torre/WhatsApp Image 2026-02-11 at 18.06.40 (2).jpeg",
+      "../../assets/propiedades/Dúplex - Lisandro de la Torre/WhatsApp Image 2026-02-11 at 18.06.40.jpeg",
+      "../../assets/propiedades/Dúplex - Lisandro de la Torre/WhatsApp Image 2026-02-11 at 18.06.41 (1).jpeg",
+      "../../assets/propiedades/Dúplex - Lisandro de la Torre/WhatsApp Image 2026-02-11 at 18.06.41 (2).jpeg",
+      "../../assets/propiedades/Dúplex - Lisandro de la Torre/WhatsApp Image 2026-02-11 at 18.06.41 (3).jpeg",
+      "../../assets/propiedades/Dúplex - Lisandro de la Torre/WhatsApp Image 2026-02-11 at 18.06.41.jpeg"
+    ],
+    "link": "../detalles/duplex-lisandro.html",
+    "etiquetas": [
+      "Dúplex",
+      "Oportunidad",
+      "Céntrico"
+    ]
   }
 ]
