@@ -38,6 +38,7 @@
                     colors: {
                         "primary": "#d9df20",
                         "asfalto": "#2D2E32",
+                        "hormigon": "#6D7278",
                         "background-light": "#f8f8f6",
                         "background-dark": "#202111",
                     },
@@ -65,6 +66,22 @@
         h1, h2, h3, h4, .font-display {
             font-family: 'Space Grotesk', sans-serif;
         }
+
+        /* Fuerza el cargado de iconos de Material Symbols */
+        .icon-logo {
+            font-family: 'Material Symbols Outlined' !important;
+            font-weight: normal;
+            font-style: normal;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
     </style>
 </head>
 
@@ -72,9 +89,10 @@
     <header class="sticky top-0 z-50 bg-asfalto text-white shadow-md px-6 md:px-12 py-4">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <a href="../../index.html" class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-3xl text-primary">architecture</span>
+                <span class="icon-logo text-3xl text-primary"
+                    style="font-variation-settings: 'FILL' 1">architecture</span>
                 <h1 class="text-xl font-bold tracking-tight uppercase text-white">Visión <span
-                        class="text-white/60 font-light">Urbana</span></h1>
+                        class="text-hormigon font-light">Urbana</span></h1>
             </a>
             <nav class="hidden md:flex items-center gap-8">
                 <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Propiedades</a>
@@ -105,9 +123,10 @@
         <div class="p-8">
             <div class="flex justify-between items-center mb-16">
                 <div class="flex items-center gap-2">
-                    <span class="material-symbols-outlined text-3xl text-primary">architecture</span>
+                    <span class="icon-logo text-3xl text-primary"
+                        style="font-variation-settings: 'FILL' 1">architecture</span>
                     <h1 class="text-xl font-bold tracking-tight uppercase text-white">Visión <span
-                            class="text-white/60 font-light">Urbana</span></h1>
+                            class="text-hormigon font-light">Urbana</span></h1>
                 </div>
                 <button onclick="toggleMobileMenu()" class="text-white">
                     <span class="material-symbols-outlined text-4xl">close</span>
@@ -228,9 +247,11 @@
                 <div class="space-y-4">
                     <a href="../../index.html" class="flex items-center gap-3">
                         <div class="bg-primary p-1 rounded-lg">
-                            <span class="material-symbols-outlined text-asfalto text-xl font-bold">architecture</span>
+                            <span class="icon-logo text-asfalto text-xl font-bold"
+                                style="font-variation-settings: 'FILL' 1">architecture</span>
                         </div>
-                        <h2 class="text-lg font-bold text-white tracking-tight uppercase">Visión Urbana</h2>
+                        <h2 class="text-lg font-bold text-white tracking-tight uppercase">Visión <span
+                                class="text-hormigon font-light">Urbana</span></h2>
                     </a>
                     <p class="text-zinc-400 text-sm leading-relaxed">Expertos en el mercado inmobiliario de General
                         Roca. Brindamos asesoramiento integral para que encuentres el hogar de tus sueños.</p>
