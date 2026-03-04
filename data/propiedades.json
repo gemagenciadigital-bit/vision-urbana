@@ -277,5 +277,36 @@
       "pileta",
       "eventos"
     ]
+  },
+  {
+    "id": "la-pampa-alsina",
+    "titulo": "Departamentos en Venta – La Pampa y Alsina",
+    "precio": "USD 176.000",
+    "tipo": "Departamento",
+    "operacion": "Venta",
+    "ubicacion": "La Pampa y Alsina, Gral. Roca",
+    "dormitorios": 2,
+    "baños": 2,
+    "superficie": "93 m² cubiertos",
+    "descripcion": "Modernos departamentos de 2 dormitorios construidos en 2021. Cuentan con balcón con parrilla, loza radiante y terminaciones de primera calidad en una ubicación excepcional.",
+    "imagen": "../../assets/propiedades/La Pampa y Alsina/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/La Pampa y Alsina/portada.jpeg",
+      "../../assets/propiedades/La Pampa y Alsina/WhatsApp Image 2026-02-27 at 17.02.10 (1).jpeg",
+      "../../assets/propiedades/La Pampa y Alsina/WhatsApp Image 2026-02-27 at 17.02.10 (2).jpeg",
+      "../../assets/propiedades/La Pampa y Alsina/WhatsApp Image 2026-02-27 at 17.02.10 (3).jpeg",
+      "../../assets/propiedades/La Pampa y Alsina/WhatsApp Image 2026-02-27 at 17.02.10.jpeg",
+      "../../assets/propiedades/La Pampa y Alsina/WhatsApp Image 2026-02-27 at 17.02.11 (1).jpeg",
+      "../../assets/propiedades/La Pampa y Alsina/WhatsApp Image 2026-02-27 at 17.02.11 (2).jpeg",
+      "../../assets/propiedades/La Pampa y Alsina/WhatsApp Image 2026-02-27 at 17.02.11 (3).jpeg",
+      "../../assets/propiedades/La Pampa y Alsina/WhatsApp Image 2026-02-27 at 17.02.11 (4).jpeg",
+      "../../assets/propiedades/La Pampa y Alsina/WhatsApp Image 2026-02-27 at 17.02.11.jpeg"
+    ],
+    "link": "../detalles/la-pampa-alsina.html",
+    "etiquetas": [
+      "moderno",
+      "oportunidad",
+      "estreno"
+    ]
   }
 ]
