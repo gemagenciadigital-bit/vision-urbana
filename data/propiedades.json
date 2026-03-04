@@ -308,5 +308,38 @@
       "oportunidad",
       "estreno"
     ]
+  },
+  {
+    "id": "la-horquilla",
+    "titulo": "Casa quinta con pileta – Barrio La Horquilla",
+    "precio": "$180.000",
+    "tipo": "Quinta",
+    "operacion": "Venta",
+    "ubicacion": "Barrio La Horquilla, Gral. Roca",
+    "dormitorios": 2,
+    "baños": 2,
+    "superficie": "190m² cubiertos / 1.216m² lote",
+    "descripcion": "Una propiedad que combina naturaleza, amplitud y calidad de vida. Ideal para vivir, descansar o invertir. Cuenta con 2 dormitorios, gran parque, pileta y parrilla en uno de los barrios más buscados.",
+    "imagen": "../../assets/propiedades/La Horquilla/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/La Horquilla/portada.jpeg",
+      "../../assets/propiedades/La Horquilla/WhatsApp Image 2026-02-11 at 17.59.28.jpeg",
+      "../../assets/propiedades/La Horquilla/WhatsApp Image 2026-02-11 at 17.59.29 (1).jpeg",
+      "../../assets/propiedades/La Horquilla/WhatsApp Image 2026-02-11 at 17.59.29 (2).jpeg",
+      "../../assets/propiedades/La Horquilla/WhatsApp Image 2026-02-11 at 17.59.29 (3).jpeg",
+      "../../assets/propiedades/La Horquilla/WhatsApp Image 2026-02-11 at 17.59.29.jpeg",
+      "../../assets/propiedades/La Horquilla/WhatsApp Image 2026-02-11 at 17.59.30 (1).jpeg",
+      "../../assets/propiedades/La Horquilla/WhatsApp Image 2026-02-11 at 17.59.30 (2).jpeg",
+      "../../assets/propiedades/La Horquilla/WhatsApp Image 2026-02-11 at 17.59.30.jpeg",
+      "../../assets/propiedades/La Horquilla/WhatsApp Image 2026-02-11 at 17.59.31 (1).jpeg",
+      "../../assets/propiedades/La Horquilla/WhatsApp Image 2026-02-11 at 17.59.31 (3).jpeg",
+      "../../assets/propiedades/La Horquilla/WhatsApp Image 2026-02-11 at 17.59.31.jpeg"
+    ],
+    "link": "../detalles/la-horquilla.html",
+    "etiquetas": [
+      "Quinta",
+      "Pileta",
+      "Naturaleza"
+    ]
   }
 ]
