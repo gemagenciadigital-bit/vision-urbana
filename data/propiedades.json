@@ -199,7 +199,7 @@
     "dormitorios": 2,
     "baños": 1,
     "superficie": "300m² lote / 50m² quincho",
-    "descripcion": "Casa funcional y lista para disfrutar en Barrio Porvenir. Cuenta con 2 habitaciones, galería techada y un amplio quincho de 50m² ideal para reuniones familiares. Ubicada en un entorno residencial tranquilo sobre un lote de 300m².",
+    "descripcion": "Casa funcional y lista para disfrutar in Barrio Porvenir. Cuenta con 2 habitaciones, galería techada y un amplio quincho de 50m² ideal para reuniones familiares. Ubicada en un entorno residencial tranquilo sobre un lote de 300m².",
     "imagen": "../../assets/propiedades/Quincho-Porvenir/portada.jpeg",
     "galeria": [
       "../../assets/propiedades/Quincho-Porvenir/portada.jpeg",
@@ -371,6 +371,31 @@
       "Dúplex",
       "Oportunidad",
       "Céntrico"
+    ]
+  },
+  {
+    "id": "santa-isabel",
+    "titulo": "Terrenos en venta – B° Santa Isabel",
+    "precio": "USD 45.000",
+    "tipo": "Lote",
+    "operacion": "Venta",
+    "ubicacion": "Juan María Traverso, Gral. Roca",
+    "dormitorios": 0,
+    "baños": 0,
+    "superficie": "1000 m²",
+    "descripcion": "Terrenos ubicados en B° Santa Isabel, un barrio privado abierto que se destaca por su tranquilidad y su entorno en crecimiento. El barrio cuenta con cámaras de seguridad e iluminación LED, ideal para quienes buscan vivir o invertir en un lugar seguro.",
+    "imagen": "../../assets/propiedades/TERRENOS – B° SANTA ISABEL/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/TERRENOS – B° SANTA ISABEL/portada.jpeg",
+      "../../assets/propiedades/TERRENOS – B° SANTA ISABEL/WhatsApp Image 2026-03-06 at 18.02.11 (1).jpeg",
+      "../../assets/propiedades/TERRENOS – B° SANTA ISABEL/WhatsApp Image 2026-03-06 at 18.02.11 (2).jpeg",
+      "../../assets/propiedades/TERRENOS – B° SANTA ISABEL/WhatsApp Image 2026-03-06 at 18.02.11 (3).jpeg"
+    ],
+    "link": "../detalles/santa-isabel.html",
+    "etiquetas": [
+      "Lote",
+      "Inversión",
+      "Seguridad"
     ]
   }
 ]
