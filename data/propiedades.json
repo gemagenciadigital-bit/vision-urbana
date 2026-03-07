@@ -470,5 +470,27 @@
       "Inversión",
       "Residencial"
     ]
+  },
+  {
+    "id": "barrio-las-vinas",
+    "titulo": "Lote – B° Las Viñas | Chubut esquina Ushuaia",
+    "precio": "USD 60.000",
+    "tipo": "Lote",
+    "operacion": "Venta",
+    "ubicacion": "Las Viñas, Gral. Roca",
+    "dormitorios": 0,
+    "baños": 0,
+    "superficie": "381 m²",
+    "descripcion": "Excelente lote ubicado en Barrio Las Viñas, en una esquina estratégica dentro de un entorno residencial tranquilo y en constante crecimiento.",
+    "imagen": "../../assets/propiedades/LOTE – B° LAS VIÑAS/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/LOTE – B° LAS VIÑAS/WhatsApp Image 2026-03-06 at 18.02.12 (1).jpeg"
+    ],
+    "link": "../detalles/barrio-las-vinas.html",
+    "etiquetas": [
+      "Lote",
+      "Esquina",
+      "Residencial"
+    ]
   }
 ]
