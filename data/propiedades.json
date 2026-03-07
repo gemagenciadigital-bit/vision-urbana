@@ -447,5 +447,28 @@
       "oficinas",
       "alquiler"
     ]
+  },
+  {
+    "id": "barrio-quintupanal",
+    "titulo": "Terrenos – B° Quintu Panal | Calle Estados Unidos",
+    "precio": "Desde USD 77.000",
+    "tipo": "Lote",
+    "operacion": "Venta",
+    "ubicacion": "Quintu Panal, Gral. Roca",
+    "dormitorios": 0,
+    "baños": 0,
+    "superficie": "600 m² aprox.",
+    "descripcion": "Dos terrenos en venta ubicados en Barrio Quintu Panal, una zona residencial consolidada y con excelente proyección en General Roca.",
+    "imagen": "../../assets/propiedades/Lotes - Barrio Quintupanal/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/Lotes - Barrio Quintupanal/WhatsApp Image 2026-03-06 at 18.02.10 (2).jpeg",
+      "../../assets/propiedades/Lotes - Barrio Quintupanal/WhatsApp Image 2026-03-06 at 18.02.10.jpeg"
+    ],
+    "link": "../detalles/barrio-quintupanal.html",
+    "etiquetas": [
+      "Lote",
+      "Inversión",
+      "Residencial"
+    ]
   }
 ]

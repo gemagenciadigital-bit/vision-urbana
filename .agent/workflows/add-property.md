@@ -10,8 +10,3 @@ Follow these steps whenever adding a new property:
    - Update `data/propiedades.json` with the new property object.
    - Verify all local paths and links.
 3. **User Review**: **MANDATORY**. Notify the user that the files have been created/updated locally. Wait for their confirmation that everything looks correct.
-4. **Deploy Changes**:
-   - Only after user approval, proceed with:
-   - `git add .`
-   - `git commit -m "add property: [property-name]"`
-   - **IMPORTANT**: Ask for final confirmation before running `git push`.
