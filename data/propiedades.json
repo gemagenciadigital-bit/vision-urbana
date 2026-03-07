@@ -397,5 +397,31 @@
       "Inversión",
       "Seguridad"
     ]
+  },
+  {
+    "id": "rodhe-1500",
+    "titulo": "Local comercial en alquiler – Rodhe 1500",
+    "precio": "$1.500.000",
+    "tipo": "Local",
+    "operacion": "Alquiler",
+    "ubicacion": "Rodhe 1500, Gral. Roca",
+    "dormitorios": 0,
+    "baños": 1,
+    "superficie": "Dos plantas",
+    "descripcion": "Local comercial con excelente visibilidad, amplia vidriera, dos plantas y calefacción central. Ubicación estratégica en General Roca.",
+    "imagen": "../../assets/propiedades/Local Comercial - Rodhe 1500/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/Local Comercial - Rodhe 1500/WhatsApp Image 2026-03-07 at 11.47.37 (1).jpeg",
+      "../../assets/propiedades/Local Comercial - Rodhe 1500/WhatsApp Image 2026-03-07 at 11.47.37 (2).jpeg",
+      "../../assets/propiedades/Local Comercial - Rodhe 1500/WhatsApp Image 2026-03-07 at 11.47.37 (3).jpeg",
+      "../../assets/propiedades/Local Comercial - Rodhe 1500/WhatsApp Image 2026-03-07 at 11.47.37 (4).jpeg",
+      "../../assets/propiedades/Local Comercial - Rodhe 1500/WhatsApp Image 2026-03-07 at 11.47.37 (5).jpeg"
+    ],
+    "link": "../detalles/rodhe-1500.html",
+    "etiquetas": [
+      "comercial",
+      "céntrico",
+      "alquiler"
+    ]
   }
 ]
