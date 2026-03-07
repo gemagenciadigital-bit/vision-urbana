@@ -321,7 +321,9 @@
 
         function updateLightboxImage() {
             const img = document.getElementById('lightbox-img');
+            const counter = document.getElementById('lightbox-counter');
             img.src = propertyPhotos[currentIndex];
+            if (counter) counter.innerText = `${currentIndex + 1} / ${totalSlides}`;
         }
 
         function closeLightbox() {
@@ -356,6 +358,11 @@
     <!-- Lightbox Modal -->
     <div id="lightbox" onclick="closeLightbox()"
         class="fixed inset-0 z-[200] bg-black/95 hidden items-center justify-center p-4 backdrop-blur-sm cursor-zoom-out">
+        
+        <!-- Photo Counter -->
+        <div id="lightbox-counter" class="absolute top-6 left-1/2 -translate-x-1/2 bg-black/40 backdrop-blur-md px-4 py-2 rounded-full text-white text-sm font-bold z-[210]">
+            1 / 1
+        </div>
         
         <!-- Close Button -->
         <button onclick="event.stopPropagation(); closeLightbox()"
