@@ -423,5 +423,29 @@
       "céntrico",
       "alquiler"
     ]
+  },
+  {
+    "id": "rodhe-1400",
+    "titulo": "Espacio corporativo en alquiler – Rodhe 1400",
+    "precio": "$3.500.000",
+    "tipo": "Local / Oficinas",
+    "operacion": "Alquiler",
+    "ubicacion": "Rodhe 1400, Gral. Roca",
+    "dormitorios": 0,
+    "baños": 2,
+    "superficie": "Sala conferencias 100 pers.",
+    "descripcion": "Espacio corporativo ideal para empresas o instituciones. Cuenta con oficinas funcionales, sala de reuniones, depósito, cocina y una sala de conferencias para 100 personas.",
+    "imagen": "../../assets/propiedades/Espacio Corporativo - Rodhe 1400/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/Espacio Corporativo - Rodhe 1400/WhatsApp Image 2026-03-07 at 12.20.13 (1).jpeg",
+      "../../assets/propiedades/Espacio Corporativo - Rodhe 1400/WhatsApp Image 2026-03-07 at 12.20.13 (2).jpeg",
+      "../../assets/propiedades/Espacio Corporativo - Rodhe 1400/WhatsApp Image 2026-03-07 at 12.20.13 (3).jpeg"
+    ],
+    "link": "../detalles/rodhe-1400.html",
+    "etiquetas": [
+      "corporativo",
+      "oficinas",
+      "alquiler"
+    ]
   }
 ]
