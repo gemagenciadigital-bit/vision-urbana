@@ -289,59 +289,6 @@
         ];
         const totalSlides = propertyPhotos.length;
         let currentIndex = 0;
-
-                
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        function openLightbox(index) {
-            currentIndex = index;
-            const lightbox = document.getElementById('lightbox');
-            updateLightboxImage();
-            lightbox.classList.remove('hidden');
-            lightbox.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-            
-            // Add touch listeners
-            lightbox.addEventListener('touchstart', handleTouchStart, false);
-            lightbox.addEventListener('touchend', handleTouchEnd, false);
-        }
-
-        function handleTouchStart(e) {
-            touchStartX = e.changedTouches[0].screenX;
-        }
-
-        function handleTouchEnd(e) {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        }
-
-        function handleSwipe() {
-            if (touchStartX - touchEndX > 50) changeLightboxPhoto(1);
-            if (touchEndX - touchStartX > 50) changeLightboxPhoto(-1);
-        }
-
-        function changeLightboxPhoto(step) {
-            currentIndex = (currentIndex + step + totalSlides) % totalSlides;
-            updateLightboxImage();
-            updateCarousel(); // Sync main carousel
-        }
-
-        function updateLightboxImage() {
-            const img = document.getElementById('lightbox-img');
-            const counter = document.getElementById('lightbox-counter');
-            img.src = propertyPhotos[currentIndex];
-            if (counter) counter.innerText = `${currentIndex + 1} / ${totalSlides}`;
-        }
-
-        function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.add('hidden');
-            lightbox.classList.remove('flex');
-            document.body.style.overflow = 'auto';
-            lightbox.removeEventListener('touchstart', handleTouchStart);
-            lightbox.removeEventListener('touchend', handleTouchEnd);
-        }
     
 
         function renderThumbnails() {
@@ -367,7 +314,6 @@
         renderThumbnails();
         window.onresize = renderThumbnails;
     </script>
-    
     <!-- Lightbox Modal -->
     <div id="lightbox" onclick="closeLightbox()"
         class="fixed inset-0 z-[200] bg-black/95 hidden items-center justify-center p-4 backdrop-blur-sm cursor-zoom-out">
@@ -401,7 +347,7 @@
             Desliza para navegar
         </div>
     </div>
-    
+
 </body>
 
 </html>
