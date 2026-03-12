@@ -492,5 +492,36 @@
       "Esquina",
       "Residencial"
     ]
+  },
+  {
+    "id": "locales-estados-unidos",
+    "titulo": "Locales comerciales – Estados Unidos 837",
+    "precio": "Desde USD 60.000",
+    "tipo": "Local",
+    "operacion": "Venta",
+    "ubicacion": "Gral. Roca",
+    "dormitorios": 0,
+    "baños": 1,
+    "superficie": "9 x 4 metros",
+    "descripcion": "Oportunidad ideal para inversión o desarrollo comercial. Se ofrecen 2 locales de 9 x 4 metros, ubicados sobre Estados Unidos 837. Cuentan con aire acondicionado y persiana mecánica.",
+    "imagen": "../../assets/propiedades/Locales Comerciales - Estados Unidos 837/portada.jpeg",
+    "galeria": [
+      "../../assets/propiedades/Locales Comerciales - Estados Unidos 837/portada.jpeg",
+      "../../assets/propiedades/Locales Comerciales - Estados Unidos 837/WhatsApp Image 2026-03-10 at 20.38.16 (2).jpeg",
+      "../../assets/propiedades/Locales Comerciales - Estados Unidos 837/WhatsApp Image 2026-03-10 at 20.38.16.jpeg",
+      "../../assets/propiedades/Locales Comerciales - Estados Unidos 837/WhatsApp Image 2026-03-10 at 20.38.17.jpeg",
+      "../../assets/propiedades/Locales Comerciales - Estados Unidos 837/WhatsApp Image 2026-03-10 at 20.38.18.jpeg",
+      "../../assets/propiedades/Locales Comerciales - Estados Unidos 837/WhatsApp Image 2026-03-10 at 20.38.19 (1).jpeg",
+      "../../assets/propiedades/Locales Comerciales - Estados Unidos 837/WhatsApp Image 2026-03-10 at 20.38.19.jpeg",
+      "../../assets/propiedades/Locales Comerciales - Estados Unidos 837/WhatsApp Image 2026-03-10 at 20.38.20 (1).jpeg",
+      "../../assets/propiedades/Locales Comerciales - Estados Unidos 837/WhatsApp Image 2026-03-10 at 20.38.20.jpeg",
+      "../../assets/propiedades/Locales Comerciales - Estados Unidos 837/WhatsApp Image 2026-03-10 at 20.38.21.jpeg"
+    ],
+    "link": "../detalles/locales-estados-unidos.html",
+    "etiquetas": [
+      "Inversión",
+      "Local",
+      "Oportunidad"
+    ]
   }
 ]
