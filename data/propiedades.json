@@ -2,7 +2,7 @@
   {
     "id": "gelonch-3941",
     "titulo": "Casa moderna en venta – Gelonch 3941",
-    "precio": "$125.000",
+    "precio": "USD 125.000",
     "tipo": "Casa",
     "operacion": "Venta",
     "ubicacion": "Gral. Roca",
@@ -27,7 +27,7 @@
   {
     "id": "ushuaia-1600",
     "titulo": "Complejo de departamentos – Ushuaia 1600",
-    "precio": "Consultar",
+    "precio": "USD 210.000",
     "tipo": "Departamento",
     "operacion": "Venta",
     "ubicacion": "Barrio Los Olmos, Gral. Roca",
@@ -54,7 +54,7 @@
   {
     "id": "dia-del-bancario-1700",
     "titulo": "Hermosa casa en Día del Bancario 1700, Gral. Roca",
-    "precio": "USD 185.000",
+    "precio": "USD 165.000",
     "tipo": "Casa",
     "operacion": "Venta",
     "ubicacion": "Gral. Roca",
